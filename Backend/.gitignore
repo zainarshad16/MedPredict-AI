@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.env
+uploads/
+reports/
+ml_model/*.h5
+ml_model/*.pkl
+.venv/
+venv/
