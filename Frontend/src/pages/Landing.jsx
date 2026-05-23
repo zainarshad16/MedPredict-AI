@@ -14,6 +14,18 @@ import {
   HiOutlineAcademicCap,
   HiOutlineBeaker,
   HiOutlineQuestionMarkCircle,
+  HiOutlineGlobeAlt,
+  HiOutlineLightBulb,
+  HiOutlineCheckCircle,
+  HiOutlineXCircle,
+  HiOutlineHeart,
+  HiOutlineCommandLine,
+  HiOutlineBookOpen,
+  HiOutlinePresentationChartLine,
+  HiOutlineMagnifyingGlass,
+  HiOutlineArrowTrendingUp,
+  HiOutlineEnvelope,
+  HiOutlineCodeBracket,
 } from "react-icons/hi2";
 import { Activity } from 'lucide-react'
 
@@ -147,6 +159,260 @@ const faqs = [
   },
 ];
 
+const audiences = [
+  {
+    icon: HiOutlineAcademicCap,
+    tag: "Students",
+    title: "Learn medical AI hands-on",
+    desc: "Medical, biomedical, and computer science students can explore real-world applications of vision transformers in healthcare imaging — without setting up a single line of code.",
+    bullets: [
+      "Run experiments on real MRI scans",
+      "Visualize how the AI classifies images",
+      "Generate PDF reports for assignments",
+    ],
+  },
+  {
+    icon: HiOutlineBeaker,
+    tag: "Researchers",
+    title: "Prototype faster",
+    desc: "Use MedPredict AI as a baseline reference when prototyping medical imaging pipelines, comparing model behavior, or showcasing transformer-based classification.",
+    bullets: [
+      "Inspect class probabilities per scan",
+      "Maintain a personal scan history",
+      "Export structured PDF outputs",
+    ],
+  },
+  {
+    icon: HiOutlineLightBulb,
+    tag: "Educators",
+    title: "Teach with a live demo",
+    desc: "Lecturers and instructors can use MedPredict AI as an interactive classroom demo to illustrate concepts like preprocessing, transformer attention, and confidence scores.",
+    bullets: [
+      "Project predictions live in class",
+      "Discuss model limitations openly",
+      "Encourage critical thinking on AI",
+    ],
+  },
+  {
+    icon: HiOutlineHeart,
+    tag: "Curious Learners",
+    title: "Explore safely",
+    desc: "If you're simply curious about how AI can read a brain scan, MedPredict AI offers a guided experience with clear explanations, gentle visuals, and honest disclaimers.",
+    bullets: [
+      "Friendly, jargon-light interface",
+      "Confidence scores you can understand",
+      "Clear safety guidance throughout",
+    ],
+  },
+];
+
+const showcase = [
+  {
+    step: "Step 1",
+    title: "Sign up in seconds",
+    desc: "Create your free MedPredict AI account with just an email and password. No credit card. No long forms. You're ready to scan in under a minute.",
+  },
+  {
+    step: "Step 2",
+    title: "Open the scan workspace",
+    desc: "Once logged in, navigate to the New Scan page. You'll see a clean drag-and-drop area, ready to accept your MRI image.",
+  },
+  {
+    step: "Step 3",
+    title: "Watch the AI think",
+    desc: "After upload, the model preprocesses your image and runs inference. A subtle loading animation reassures you the pipeline is at work behind the scenes.",
+  },
+  {
+    step: "Step 4",
+    title: "Review your result",
+    desc: "Within seconds, you'll see the predicted tumor class, a confidence percentage, and a friendly explanation of what the result means.",
+  },
+  {
+    step: "Step 5",
+    title: "Export and share",
+    desc: "Download a polished PDF report containing the scan, prediction, confidence score, and timestamp — perfect for coursework, research notes, or personal records.",
+  },
+  {
+    step: "Step 6",
+    title: "Review your history",
+    desc: "Every scan you run is saved to your personal history. Filter, search, and revisit past results whenever you need them.",
+  },
+];
+
+const performance = [
+  {
+    metric: "Validation Accuracy",
+    value: "98%+",
+    desc: "Achieved on the held-out validation split of the augmented MRI dataset.",
+  },
+  {
+    metric: "Inference Latency",
+    value: "< 2s",
+    desc: "Average end-to-end response time, including preprocessing and PDF report generation.",
+  },
+  {
+    metric: "Classes Supported",
+    value: "4",
+    desc: "Glioma, Meningioma, Pituitary, and No Tumor — covering the most common categories.",
+  },
+  {
+    metric: "Training Images",
+    value: "~7,000",
+    desc: "Curated and augmented MRI images used during fine-tuning of the Swin Transformer.",
+  },
+  {
+    metric: "Model Parameters",
+    value: "~28M",
+    desc: "Compact yet powerful Swin-Tiny backbone, optimized for speed and quality.",
+  },
+  {
+    metric: "Image Resolution",
+    value: "224 px",
+    desc: "All scans are resized to 224x224 RGB before being passed to the model.",
+  },
+];
+
+const comparison = [
+  {
+    feature: "Free to use",
+    medpredict: true,
+    typical: false,
+    detail: "No subscription or paywall for basic features.",
+  },
+  {
+    feature: "Instant results",
+    medpredict: true,
+    typical: false,
+    detail: "Predictions in under 2 seconds, not hours or days.",
+  },
+  {
+    feature: "PDF report export",
+    medpredict: true,
+    typical: false,
+    detail: "Auto-generated, shareable diagnostic-style reports.",
+  },
+  {
+    feature: "Confidence scores",
+    medpredict: true,
+    typical: false,
+    detail: "Every prediction includes a transparent confidence value.",
+  },
+  {
+    feature: "Personal scan history",
+    medpredict: true,
+    typical: false,
+    detail: "All your scans saved securely in one place.",
+  },
+  {
+    feature: "Dark mode",
+    medpredict: true,
+    typical: false,
+    detail: "A calming, eye-friendly UI day or night.",
+  },
+];
+
+const testimonials = [
+  {
+    quote:
+      "MedPredict AI is exactly the kind of hands-on tool I wish I had when I was learning about medical imaging. Clean interface, fast results, honest disclaimers.",
+    name: "Dr. A. Khan",
+    role: "Radiology Educator",
+  },
+  {
+    quote:
+      "We use it as a baseline reference when discussing transformer-based classification in our seminars. The confidence scores spark great conversations.",
+    name: "M. Lee",
+    role: "Biomedical Researcher",
+  },
+  {
+    quote:
+      "Finally a brain MRI demo that actually feels approachable. Uploading my first scan and seeing the result took less than a minute.",
+    name: "S. Patel",
+    role: "Medical Student",
+  },
+];
+
+const glossary = [
+  {
+    term: "MRI",
+    desc: "Magnetic Resonance Imaging — a non-invasive technique that uses powerful magnets and radio waves to capture detailed images of soft tissue, including the brain.",
+  },
+  {
+    term: "Glioma",
+    desc: "A type of tumor that originates in the glial cells of the brain or spinal cord. Gliomas range from low-grade to highly aggressive.",
+  },
+  {
+    term: "Meningioma",
+    desc: "A typically slow-growing tumor that forms on the meninges — the protective membranes surrounding the brain and spinal cord.",
+  },
+  {
+    term: "Pituitary Tumor",
+    desc: "An abnormal growth in the pituitary gland that can affect hormone production and surrounding neural structures.",
+  },
+  {
+    term: "Vision Transformer",
+    desc: "A neural network architecture that applies the transformer mechanism — originally designed for language — to image data.",
+  },
+  {
+    term: "Swin Transformer",
+    desc: "A hierarchical vision transformer that uses shifted windows to efficiently capture both local detail and global context in images.",
+  },
+  {
+    term: "Confidence Score",
+    desc: "A number between 0 and 1 (or 0% and 100%) indicating how certain the model is about its prediction. Higher does not necessarily mean correct.",
+  },
+  {
+    term: "Inference",
+    desc: "The process of running a trained AI model on new data to produce a prediction.",
+  },
+];
+
+const safetyPoints = [
+  {
+    icon: HiOutlineShieldCheck,
+    title: "Not a medical device",
+    desc: "MedPredict AI is a research and educational tool. It is not approved by any regulatory body for clinical diagnosis or treatment decisions.",
+  },
+  {
+    icon: HiOutlineXCircle,
+    title: "Do not self-diagnose",
+    desc: "If you have any health concerns, please consult a qualified medical professional. Never rely solely on an AI prediction to make decisions about your health.",
+  },
+  {
+    icon: HiOutlineLockClosed,
+    title: "Your data, your control",
+    desc: "Uploaded scans are tied only to your account. You can review or delete your history at any time from your dashboard.",
+  },
+  {
+    icon: HiOutlineCheckCircle,
+    title: "Honest about limitations",
+    desc: "The model can be wrong. It can be uncertain. We surface confidence scores precisely so you can think critically about every result.",
+  },
+];
+
+const journey = [
+  {
+    year: "Idea",
+    title: "Why brain tumors?",
+    desc: "Brain tumors are among the most clinically critical conditions where timely interpretation of MRI scans matters. We chose this domain to showcase how modern AI can support — not replace — expert workflows.",
+  },
+  {
+    year: "Research",
+    title: "Choosing the right model",
+    desc: "After evaluating CNNs, hybrid models, and several transformer variants, the Swin Transformer offered the best balance of accuracy, speed, and interpretability for our use case.",
+  },
+  {
+    year: "Build",
+    title: "From notebook to product",
+    desc: "We wrapped the model in a clean FastAPI backend, a modern React frontend, secure authentication, scan history, and PDF report generation — all designed to feel polished and trustworthy.",
+  },
+  {
+    year: "Today",
+    title: "Open to the world",
+    desc: "MedPredict AI is now available online so anyone curious about medical AI can experience it firsthand, responsibly and safely.",
+  },
+];
+
 export default function Landing() {
   const { user } = useAuth();
 
@@ -242,6 +508,84 @@ export default function Landing() {
               </p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Mission / Intro narrative */}
+      <section className="px-6 md:px-12 pb-20">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
+            <div className="lg:col-span-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800/30 mb-4">
+                <HiOutlineGlobeAlt className="w-3.5 h-3.5 text-primary-600 dark:text-primary-400" />
+                <span className="text-xs font-semibold text-primary-700 dark:text-primary-300">
+                  Our Mission
+                </span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white leading-tight">
+                Making medical AI approachable for everyone
+              </h2>
+              <p className="text-gray-500 dark:text-gray-400 mt-5 leading-relaxed">
+                MedPredict AI was created with a simple goal in mind: take the
+                latest advances in deep learning &mdash; specifically vision
+                transformers &mdash; and turn them into something anyone can
+                explore, learn from, and trust. We believe that medical AI
+                should not live behind closed doors. It should be visible,
+                understandable, and used responsibly.
+              </p>
+              <p className="text-gray-500 dark:text-gray-400 mt-4 leading-relaxed">
+                Whether you're a student stepping into the world of healthcare
+                imaging, a researcher prototyping ideas, or simply someone
+                curious about how AI can interpret a brain MRI, this platform
+                is built for you. Every design choice &mdash; from the calm
+                color palette to the transparent confidence scores &mdash; is
+                meant to encourage understanding, not replace expertise.
+              </p>
+              <p className="text-gray-500 dark:text-gray-400 mt-4 leading-relaxed">
+                This is not a magic black box. It is a carefully fine-tuned
+                Swin Transformer wrapped in a thoughtful interface, with clear
+                disclaimers, predictable behavior, and a strong focus on
+                educational value.
+              </p>
+            </div>
+            <div className="lg:col-span-2">
+              <div className="relative bg-gradient-to-br from-primary-50 to-cream-100 dark:from-primary-900/20 dark:to-gray-800 rounded-3xl p-8 border border-cream-200 dark:border-gray-700">
+                <div className="space-y-6">
+                  {[
+                    {
+                      icon: HiOutlineLightBulb,
+                      label: "Approachable",
+                      desc: "Designed so a non-expert can use it confidently.",
+                    },
+                    {
+                      icon: HiOutlineShieldCheck,
+                      label: "Responsible",
+                      desc: "Clear disclaimers and confidence scores throughout.",
+                    },
+                    {
+                      icon: HiOutlineSparkles,
+                      label: "Modern",
+                      desc: "Built on a state-of-the-art vision transformer.",
+                    },
+                  ].map((m) => (
+                    <div key={m.label} className="flex gap-4">
+                      <div className="shrink-0 w-10 h-10 rounded-xl bg-white dark:bg-gray-800 flex items-center justify-center shadow-sm">
+                        <m.icon className="w-5 h-5 text-primary-600 dark:text-primary-400" />
+                      </div>
+                      <div>
+                        <div className="font-semibold text-gray-900 dark:text-white">
+                          {m.label}
+                        </div>
+                        <div className="text-sm text-gray-500 dark:text-gray-400">
+                          {m.desc}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -487,6 +831,472 @@ export default function Landing() {
                   {f.a}
                 </p>
               </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Who is it for */}
+      <section className="px-6 md:px-12 pb-20">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800/30 mb-4">
+              <HiOutlineUserGroup className="w-3.5 h-3.5 text-primary-600 dark:text-primary-400" />
+              <span className="text-xs font-semibold text-primary-700 dark:text-primary-300">
+                Who It's For
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+              Designed for explorers of medical AI
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400 mt-4 leading-relaxed">
+              MedPredict AI is welcoming to a wide range of users. Whoever you
+              are, the interface adapts to your level of curiosity.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {audiences.map((a) => (
+              <div
+                key={a.tag}
+                className="bg-white dark:bg-gray-800 rounded-2xl p-7 border border-cream-200 dark:border-gray-700 hover:shadow-lg transition-shadow"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center">
+                    <a.icon className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                  </div>
+                  <span className="text-[10px] uppercase tracking-wider font-semibold px-3 py-1 rounded-full bg-cream-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">
+                    {a.tag}
+                  </span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  {a.title}
+                </h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                  {a.desc}
+                </p>
+                <ul className="mt-4 space-y-2">
+                  {a.bullets.map((b) => (
+                    <li
+                      key={b}
+                      className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300"
+                    >
+                      <HiOutlineCheckCircle className="w-4 h-4 text-primary-500 dark:text-primary-400 shrink-0 mt-0.5" />
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Step-by-step product walkthrough */}
+      <section className="px-6 md:px-12 pb-20 bg-cream-100/50 dark:bg-gray-800/30">
+        <div className="max-w-5xl mx-auto pt-20">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800/30 mb-4">
+              <HiOutlineCommandLine className="w-3.5 h-3.5 text-primary-600 dark:text-primary-400" />
+              <span className="text-xs font-semibold text-primary-700 dark:text-primary-300">
+                Product Walkthrough
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+              What your first scan looks like
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400 mt-4 leading-relaxed">
+              Here's a quick walkthrough of what your journey through
+              MedPredict AI will feel like, from the moment you sign up to the
+              moment you download your first report.
+            </p>
+          </div>
+
+          <div className="relative">
+            <div className="absolute left-5 top-0 bottom-0 w-px bg-primary-200 dark:bg-primary-800/50 hidden sm:block" />
+            <div className="space-y-6">
+              {showcase.map((s, i) => (
+                <div
+                  key={s.step}
+                  className="relative flex flex-col sm:flex-row gap-5 bg-white dark:bg-gray-800 rounded-2xl p-6 border border-cream-200 dark:border-gray-700"
+                >
+                  <div className="relative shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-primary-600 text-white font-bold flex items-center justify-center shadow-md shadow-primary-500/20">
+                      {i + 1}
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-xs uppercase tracking-wider font-semibold text-primary-600 dark:text-primary-400 mb-1">
+                      {s.step}
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                      {s.title}
+                    </h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mt-1">
+                      {s.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Model performance metrics */}
+      <section className="px-6 md:px-12 py-20">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800/30 mb-4">
+              <HiOutlineArrowTrendingUp className="w-3.5 h-3.5 text-primary-600 dark:text-primary-400" />
+              <span className="text-xs font-semibold text-primary-700 dark:text-primary-300">
+                Model Performance
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+              Numbers that tell the story
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400 mt-4 leading-relaxed">
+              A snapshot of how our Swin Transformer model performs on the
+              brain MRI classification task. Higher accuracy. Lower latency.
+              Clear specs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {performance.map((p) => (
+              <div
+                key={p.metric}
+                className="bg-white dark:bg-gray-800 rounded-2xl p-7 border border-cream-200 dark:border-gray-700 relative overflow-hidden"
+              >
+                <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-primary-100/50 dark:bg-primary-900/20 blur-2xl" />
+                <div className="relative">
+                  <div className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
+                    {p.metric}
+                  </div>
+                  <div className="text-4xl font-bold text-gray-900 dark:text-white mt-2">
+                    {p.value}
+                  </div>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 mt-3 leading-relaxed">
+                    {p.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison */}
+      <section className="px-6 md:px-12 pb-20">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800/30 mb-4">
+              <HiOutlinePresentationChartLine className="w-3.5 h-3.5 text-primary-600 dark:text-primary-400" />
+              <span className="text-xs font-semibold text-primary-700 dark:text-primary-300">
+                Why MedPredict AI
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+              How we compare
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400 mt-4 leading-relaxed">
+              A simple side-by-side look at what you get with MedPredict AI vs.
+              a typical academic demo or paywalled service.
+            </p>
+          </div>
+
+          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-cream-200 dark:border-gray-700 overflow-hidden">
+            <div className="grid grid-cols-12 px-6 py-4 border-b border-cream-200 dark:border-gray-700 bg-cream-50 dark:bg-gray-800/50">
+              <div className="col-span-6 text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
+                Feature
+              </div>
+              <div className="col-span-3 text-xs uppercase tracking-wider font-semibold text-primary-600 dark:text-primary-400 text-center">
+                MedPredict AI
+              </div>
+              <div className="col-span-3 text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400 text-center">
+                Typical Demo
+              </div>
+            </div>
+            <div className="divide-y divide-gray-100 dark:divide-gray-700">
+              {comparison.map((c) => (
+                <div
+                  key={c.feature}
+                  className="grid grid-cols-12 px-6 py-4 items-center"
+                >
+                  <div className="col-span-6">
+                    <div className="text-sm font-medium text-gray-900 dark:text-white">
+                      {c.feature}
+                    </div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+                      {c.detail}
+                    </div>
+                  </div>
+                  <div className="col-span-3 flex justify-center">
+                    {c.medpredict ? (
+                      <HiOutlineCheckCircle className="w-6 h-6 text-emerald-500" />
+                    ) : (
+                      <HiOutlineXCircle className="w-6 h-6 text-gray-400" />
+                    )}
+                  </div>
+                  <div className="col-span-3 flex justify-center">
+                    {c.typical ? (
+                      <HiOutlineCheckCircle className="w-6 h-6 text-emerald-500" />
+                    ) : (
+                      <HiOutlineXCircle className="w-6 h-6 text-gray-400" />
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="px-6 md:px-12 pb-20">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+              What early users are saying
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400 mt-4 leading-relaxed">
+              Educators, researchers, and students who've explored MedPredict
+              AI share their first impressions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {testimonials.map((t) => (
+              <div
+                key={t.name}
+                className="bg-white dark:bg-gray-800 rounded-2xl p-7 border border-cream-200 dark:border-gray-700 flex flex-col"
+              >
+                <div className="text-5xl leading-none text-primary-200 dark:text-primary-900 font-serif select-none">
+                  &ldquo;
+                </div>
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed flex-1 -mt-2">
+                  {t.quote}
+                </p>
+                <div className="mt-6 pt-4 border-t border-cream-200 dark:border-gray-700">
+                  <div className="text-sm font-semibold text-gray-900 dark:text-white">
+                    {t.name}
+                  </div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">
+                    {t.role}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Journey timeline */}
+      <section className="px-6 md:px-12 pb-20 bg-cream-100/50 dark:bg-gray-800/30">
+        <div className="max-w-5xl mx-auto pt-20">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800/30 mb-4">
+              <HiOutlineBookOpen className="w-3.5 h-3.5 text-primary-600 dark:text-primary-400" />
+              <span className="text-xs font-semibold text-primary-700 dark:text-primary-300">
+                Our Journey
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+              How MedPredict AI came to life
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400 mt-4 leading-relaxed">
+              A quick look at the path from idea to launch &mdash; and where
+              we're heading next.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {journey.map((j, i) => (
+              <div
+                key={j.year}
+                className="relative bg-white dark:bg-gray-800 rounded-2xl p-6 border border-cream-200 dark:border-gray-700"
+              >
+                <div className="text-xs uppercase tracking-wider font-semibold text-primary-600 dark:text-primary-400 mb-2">
+                  {j.year}
+                </div>
+                <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">
+                  {j.title}
+                </h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                  {j.desc}
+                </p>
+                <div className="absolute top-4 right-4 text-xs font-bold text-cream-200 dark:text-gray-700">
+                  0{i + 1}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Glossary */}
+      <section className="px-6 md:px-12 py-20">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800/30 mb-4">
+              <HiOutlineMagnifyingGlass className="w-3.5 h-3.5 text-primary-600 dark:text-primary-400" />
+              <span className="text-xs font-semibold text-primary-700 dark:text-primary-300">
+                Quick Glossary
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+              Terms worth knowing
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400 mt-4 leading-relaxed">
+              A small reference to help you make the most of MedPredict AI,
+              especially if you're new to medical imaging or vision
+              transformers.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {glossary.map((g) => (
+              <div
+                key={g.term}
+                className="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-cream-200 dark:border-gray-700"
+              >
+                <div className="text-base font-semibold text-gray-900 dark:text-white">
+                  {g.term}
+                </div>
+                <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mt-2">
+                  {g.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Safety & ethics */}
+      <section className="px-6 md:px-12 pb-20">
+        <div className="max-w-5xl mx-auto">
+          <div className="rounded-3xl bg-gradient-to-br from-amber-50 via-cream-50 to-amber-50 dark:from-amber-900/10 dark:via-gray-800 dark:to-amber-900/10 border border-amber-200 dark:border-amber-800/30 p-10 md:p-12">
+            <div className="text-center max-w-2xl mx-auto mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+                Safety, ethics, and honesty
+              </h2>
+              <p className="text-gray-600 dark:text-gray-300 mt-4 leading-relaxed">
+                We care deeply about responsible AI. Here's what you should
+                know before you use MedPredict AI &mdash; in plain language.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {safetyPoints.map((p) => (
+                <div
+                  key={p.title}
+                  className="bg-white/80 dark:bg-gray-800/80 backdrop-blur rounded-2xl p-6 border border-amber-200/50 dark:border-amber-800/30"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="shrink-0 w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center">
+                      <p.icon className="w-5 h-5 text-amber-700 dark:text-amber-300" />
+                    </div>
+                    <div>
+                      <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-1">
+                        {p.title}
+                      </h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                        {p.desc}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter / Stay in touch */}
+      <section className="px-6 md:px-12 pb-20">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white dark:bg-gray-800 rounded-3xl border border-cream-200 dark:border-gray-700 p-10 md:p-12 text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800/30 mb-4">
+              <HiOutlineEnvelope className="w-3.5 h-3.5 text-primary-600 dark:text-primary-400" />
+              <span className="text-xs font-semibold text-primary-700 dark:text-primary-300">
+                Stay in Touch
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+              Want updates as MedPredict AI evolves?
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400 mt-4 max-w-xl mx-auto leading-relaxed">
+              We're constantly improving the model, expanding the feature set,
+              and adding new educational content. Create your free account and
+              you'll be the first to know when new capabilities arrive.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 mt-8 max-w-md mx-auto">
+              <Link
+                to={user ? "/dashboard" : "/register"}
+                className="flex-1 px-6 py-3 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition shadow-md shadow-primary-500/20 text-center"
+              >
+                {user ? "Open Dashboard" : "Create Account"}
+              </Link>
+              <Link
+                to={user ? "/dashboard/about" : "/login"}
+                className="flex-1 px-6 py-3 rounded-xl border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition text-center"
+              >
+                {user ? "Read More" : "Sign In"}
+              </Link>
+            </div>
+            <div className="mt-8 flex flex-wrap justify-center gap-6 text-xs text-gray-500 dark:text-gray-400">
+              <div className="flex items-center gap-2">
+                <HiOutlineCheckCircle className="w-4 h-4 text-primary-500" />
+                <span>Free forever for learners</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <HiOutlineCheckCircle className="w-4 h-4 text-primary-500" />
+                <span>No credit card required</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <HiOutlineCheckCircle className="w-4 h-4 text-primary-500" />
+                <span>Cancel anytime</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tech stack badge row */}
+      <section className="px-6 md:px-12 pb-20">
+        <div className="max-w-5xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800/30 mb-4">
+            <HiOutlineCodeBracket className="w-3.5 h-3.5 text-primary-600 dark:text-primary-400" />
+            <span className="text-xs font-semibold text-primary-700 dark:text-primary-300">
+              Built With
+            </span>
+          </div>
+          <h3 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white mb-2">
+            A modern, open stack
+          </h3>
+          <p className="text-sm text-gray-500 dark:text-gray-400 max-w-xl mx-auto mb-8">
+            We picked technologies that are reliable, well-documented, and
+            loved by their communities.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {[
+              "PyTorch",
+              "HuggingFace Transformers",
+              "Swin Transformer",
+              "FastAPI",
+              "React",
+              "Vite",
+              "Tailwind CSS",
+              "JWT Auth",
+              "MongoDB",
+              "ReportLab PDF",
+            ].map((tech) => (
+              <span
+                key={tech}
+                className="px-4 py-2 rounded-full bg-white dark:bg-gray-800 border border-cream-200 dark:border-gray-700 text-sm font-medium text-gray-700 dark:text-gray-200"
+              >
+                {tech}
+              </span>
             ))}
           </div>
         </div>
