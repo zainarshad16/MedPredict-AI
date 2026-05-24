@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import ThemeToggle from "../components/ThemeToggle";
@@ -415,18 +416,22 @@ const journey = [
 
 export default function Landing() {
   const { user } = useAuth();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-cream-50 dark:bg-gray-900">
       {/* Nav */}
-      <nav className="flex items-center justify-between px-6 md:px-12 py-4 border-b border-cream-200 dark:border-gray-800">
-        <Link to="/" className="flex items-center gap-3">
+      <nav className="flex items-center justify-between px-4 md:px-12 py-4 border-b border-cream-200 dark:border-gray-800 relative">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2.5">
           <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center shadow-lg">
             <Activity className="w-5 h-5 text-white" />
           </div>
           <span className="text-lg font-bold text-primary-700 dark:text-primary-400">MedPredict AI</span>
         </Link>
-        <div className="flex items-center gap-3">
+
+        {/* Desktop nav */}
+        <div className="hidden sm:flex items-center gap-3">
           <ThemeToggle />
           {user ? (
             <Link
@@ -452,6 +457,56 @@ export default function Landing() {
             </>
           )}
         </div>
+
+        {/* Mobile: theme toggle + hamburger */}
+        <div className="flex sm:hidden items-center gap-2">
+          <ThemeToggle />
+          <button
+            onClick={() => setMobileMenuOpen((o) => !o)}
+            className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            aria-label="Toggle menu"
+          >
+            <svg className="w-5 h-5 text-gray-700 dark:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              {mobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile dropdown menu */}
+        {mobileMenuOpen && (
+          <div className="absolute top-full left-0 right-0 bg-white dark:bg-gray-900 border-b border-cream-200 dark:border-gray-800 px-4 py-4 flex flex-col gap-3 sm:hidden z-50 shadow-lg">
+            {user ? (
+              <Link
+                to="/dashboard"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full text-center px-5 py-2.5 rounded-xl bg-primary-600 text-white text-sm font-semibold hover:bg-primary-700 transition"
+              >
+                Dashboard
+              </Link>
+            ) : (
+              <>
+                <Link
+                  to="/login"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full text-center px-5 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition"
+                >
+                  Sign In
+                </Link>
+                <Link
+                  to="/register"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full text-center px-5 py-2.5 rounded-xl bg-primary-600 text-white text-sm font-semibold hover:bg-primary-700 transition"
+                >
+                  Get Started
+                </Link>
+              </>
+            )}
+          </div>
+        )}
       </nav>
 
       {/* Hero */}
